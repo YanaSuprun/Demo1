@@ -1,4 +1,5 @@
 export { chessboardError,
+  trianglesError,
   luckyTicketsError,
   palindromeError,
   numericalSequenceError,
@@ -7,6 +8,7 @@ export { chessboardError,
 
 let chessboardError = {status: 'Failed', reason: 'Incorrect input data. Please, pay attention on arguments rules: quantity - 3; height - number; width - number; symbol - non-empty single character string'};
 
+let trianglesError = {status: 'Failed', reason: 'Incorrect input data. Please, pay attention on arguments rules: min triangle quantity - 2; each triangle should exist(summ of 2 side > 3rd side); all sides - positive numbers'};
 let palindromeError = {status: 'Failed', reason: 'Incorrect input data. Please, pay attention on arguments rules: quantity - 1; type - number; value > 10'};
 let luckyTicketsError = { status: 'Failed', reason: 'Incorrect input data. Please, pay attention on arguments. Rules: it shoul be object with props min and max; max > min' }
 let numericalSequenceError = {status: 'Failed', reason: 'Incorrect input data. Please, pay attention on arguments rules: quantity - 2; n > 0; m > 0'};
