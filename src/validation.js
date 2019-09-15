@@ -12,7 +12,9 @@ let validateChessboard = (width, height, symbol,) => {
   return !isNaN(width)
     && !isNaN(height)
     && width > 0
+    && width <= 50
     && height > 0
+    && height <= 50
     && symbol.trim().length
     && symbol.length === 1;
 };
