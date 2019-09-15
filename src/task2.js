@@ -1,7 +1,7 @@
 import {envelopesError} from './errors.js';
 import {validateEnvelopes} from './validation.js';
 
-export const checkEnvelope = ({a, b}, {c, d},) => {
+export const checkEnvelopes = ({a, b}, {c, d},) => {
   const isValid = validateEnvelopes({a, b}, {c, d},);
 
   if(!isValid) {
@@ -25,10 +25,3 @@ export const checkEnvelope = ({a, b}, {c, d},) => {
     return 0
   }
 };
-
-console.log(checkEnvelope({a: 4, b: 4}, {c: 2, d: 2}))
-console.log(checkEnvelope({a: 2, b: 2}, {c: 4, d: 4}))
-console.log(checkEnvelope({a: 3, b: 3}, {c: 3, d: 3}))
-console.log(checkEnvelope({a: 3, b: 3}, {}))
-console.log(checkEnvelope({a: 'f', b: 3}, {c: 3, d: 3}))
-console.log(checkEnvelope({a: -3, b: 3}, {c: 3, d: 3}))

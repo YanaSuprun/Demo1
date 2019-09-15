@@ -26,11 +26,7 @@ let validateEnvelopes = ({a, b}, {c, d},) => {
     && b > 0
     && c > 0
     && d > 0;
-}
-
-console.log(validateEnvelopes({a: 4, b: 4}, {c: 2, d: 2}))
-console.log(validateEnvelopes({a: -4, b: 4}, {c: 2, d: 2}))
-console.log(validateEnvelopes({a: 4, b: 4},{}))
+};
 
 // let validateTriangles = (arr) => {
 //   arr.map((elem) => {
