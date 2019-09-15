@@ -1,5 +1,6 @@
 export {
   validateChessboard,
+  validateEnvelopes,
   // validateTriangles,
   validateLuckyTickets,
   validatePalindrome,
@@ -15,6 +16,21 @@ let validateChessboard = (width, height, symbol,) => {
     && symbol.trim().length
     && symbol.length === 1;
 };
+
+let validateEnvelopes = ({a, b}, {c, d},) => {
+  return !isNaN(a)
+    && !isNaN(b)
+    && !isNaN(c)
+    && !isNaN(d)
+    && a > 0
+    && b > 0
+    && c > 0
+    && d > 0;
+}
+
+console.log(validateEnvelopes({a: 4, b: 4}, {c: 2, d: 2}))
+console.log(validateEnvelopes({a: -4, b: 4}, {c: 2, d: 2}))
+console.log(validateEnvelopes({a: 4, b: 4},{}))
 
 // let validateTriangles = (arr) => {
 //   arr.map((elem) => {

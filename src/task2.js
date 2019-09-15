@@ -1,4 +1,12 @@
+import {envelopesError} from './errors.js';
+import {validateEnvelopes} from './validation.js';
+
 export const checkEnvelope = ({a, b}, {c, d},) => {
+  const isValid = validateEnvelopes({a, b}, {c, d},);
+
+  if(!isValid) {
+    return envelopesError;
+  }
 
   const carverCounting = (a,b,p,q) => {
     const count = b > (2*p*q*a + (p**2 - q**2) * Math.sqrt(p**2 + q**2 - a**2)) / (p**2 + q**2);
@@ -21,3 +29,6 @@ export const checkEnvelope = ({a, b}, {c, d},) => {
 console.log(checkEnvelope({a: 4, b: 4}, {c: 2, d: 2}))
 console.log(checkEnvelope({a: 2, b: 2}, {c: 4, d: 4}))
 console.log(checkEnvelope({a: 3, b: 3}, {c: 3, d: 3}))
+console.log(checkEnvelope({a: 3, b: 3}, {}))
+console.log(checkEnvelope({a: 'f', b: 3}, {c: 3, d: 3}))
+console.log(checkEnvelope({a: -3, b: 3}, {c: 3, d: 3}))
