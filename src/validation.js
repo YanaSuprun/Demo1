@@ -1,7 +1,7 @@
 export {
   validateChessboard,
   validateEnvelopes,
-  // validateTriangles,
+  validateTriangles,
   validateLuckyTickets,
   validatePalindrome,
   validateNumericalSequence,
@@ -30,20 +30,15 @@ let validateEnvelopes = ({a, b}, {c, d},) => {
     && d > 0;
 };
 
-// let validateTriangles = (arr) => {
-//   arr.map((elem) => {
-//     let res =[];
-//     for(let key in elem) {
-//       if(!isNaN(elem[key])) {
-//         res.push(elem[key])
-//       }
-//     }
-//     console.log(res);
-//     return (res[0]<res[1]+res[2] && res[1]<res[0]+res[2] && res[2]<res[0]+res[1])
-//       // console.log('ok')
-    
-//   });
-// };
+let validateTriangles = (arr = [...{vertices, a, b, c}]) => {
+  return !isNaN(a)
+    && !isNaN(b)
+    && !isNaN(c)
+    && (a + b > c
+    || b + c > a
+    || c + a > b
+    )
+};
 
 let validateNumericalSequence = (n, m,) => {
   return !isNaN(n)

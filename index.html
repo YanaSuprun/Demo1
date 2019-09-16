@@ -96,6 +96,7 @@
           <!--Task №3-->
           <div class="tab-pane fade" id="list-task3" role="tabpanel" aria-labelledby="task-3">
             <div>
+              <p class="text-danger">!!!Need revision</p>
               <h2>Triangles Sort</h2>
               <p>Output triangles in descending order of their area.</p>
               <p>Входные параметры: массив объектов треугольник</p>
@@ -111,20 +112,20 @@
             <form class="form-inline" name="form3">
               <div class="triangle">
                 <p class="mt-2">Triangle 1:</p>
-                <input type="text" class="form-control col-2 mr-2" placeholder="vertices">
+                <input type="text" id="vertices1" class="form-control col-2 mr-2" placeholder="vertices">
                 <input type="text" class="form-control col-2 mr-2" placeholder="side1">
                 <input type="text" class="form-control col-2 mr-2" placeholder="side2">
                 <input type="text" class="form-control col-2 mr-2" placeholder="side3">
               </div>
               <div class="triangle">
                 <p class="mt-2">Triangle 2:</p>
-                <input type="text" class="form-control col-2 mr-2" placeholder="vertices">
+                <input type="text" id="vertices2" class="form-control col-2 mr-2" placeholder="vertices">
                 <input type="text" class="form-control col-2 mr-2" placeholder="side1">
                 <input type="text" class="form-control col-2 mr-2" placeholder="side2">
                 <input type="text" class="form-control col-2 mr-2" placeholder="side3">
               </div>
 
-              <button type="button" class="btn btn-primary btn-bottom mt-3">Start sort</button>
+              <button type="button" id="btn-triangles" class="btn btn-primary btn-bottom mt-3">Start sort</button>
             </form>
 
             <div id="result-triangles"></div>
@@ -141,9 +142,9 @@
 
             <form class="form-inline" name="form4">
               <div class="form-group">
-                <input type="text" class="form-control m-2" placeholder="number">
+                <input type="text" id="number" class="form-control m-2" placeholder="number">
               </div>
-              <button type="button" class="btn btn-primary m-2">Get palindrome</button>
+              <button type="button" id="btn-palindrome" class="btn btn-primary m-2">Get palindrome</button>
             </form>
 
             <div id="result-palindrome"></div>
@@ -163,10 +164,10 @@
 
             <form class="form-inline" name="form5">
               <div class="form-group">
-                <input type="text" class="form-control m-2" maxlength="6" placeholder="min">
-                <input type="text" class="form-control m-2" maxlength="6" placeholder="max">
+                <input type="text" id="min" class="form-control m-2" maxlength="6" placeholder="min">
+                <input type="text" id="max" class="form-control m-2" maxlength="6" placeholder="max">
               </div>
-              <button type="button" class="btn btn-primary m-2">Start count</button>
+              <button type="button" id="btn-tickets" class="btn btn-primary m-2">Start count</button>
             </form>
 
             <div id="result-tickets"></div>
@@ -176,26 +177,26 @@
         <div class="tab-pane fade" id="list-task6" role="tabpanel" aria-labelledby="task-6">
           <div>
             <h2>Numerical sequence</h2>
-            <p>Вывести через запятую ряд длиной n, состоящий из натуральных чисел, квадрат которых не меньше заданного
-              m</p>
-            <p>Входные параметры: длина и значение минимального квадрата</p>
-            <p>Выход: строка с рядом чисел</p>
+            <p>Task: print a comma-separated row of natural numbers of length n. Which square is not less than the given m.</p>
+            <p>Input parameters: length and minimum square value</p>
+            <p>Output: a string with a series of numbers</p>
           </div>
 
           <form class="form-inline" name="form6">
             <div class="form-group">
-              <input type="text" class="form-control m-2" placeholder="length">
-              <input type="text" class="form-control m-2" placeholder="min">
+              <input type="text" id="num-n" class="form-control m-2" placeholder="length">
+              <input type="text" id="num-m"class="form-control m-2" placeholder="min square">
             </div>
-            <button type="button" class="btn btn-primary m-2">Get sequence</button>
+            <button type="button" id="btn-sequence" class="btn btn-primary m-2">Get sequence</button>
           </form>
 
-          <div class="result-sequense"></div>
+          <div id="result-sequence"></div>
         </div>
 
         <!--Task №7-->
         <div class="tab-pane fade" id="list-task7" role="tabpanel" aria-labelledby="task-7">
           <div>
+            <p class="text-danger">!!!!!GUI did not implemented</p>
             <h2>Fibonacci</h2>
             <p>Print all Fibonacci numbers that are in the specified range of min and max, or have the specified length.</p>
             <p>Input parameters: min and max > 0, or length</p>
@@ -204,13 +205,14 @@
 
           <form class="form-inline" name="form7">
             <div class="form-group">
-              <input type="text" class="form-control m-2" placeholder="length">
+              <input type="text" id="fib-length" class="form-control m-2" placeholder="length">
             </div>
+            <button type="button" id="btn-fib-length" class="btn btn-primary">Get result</button>
             <div class="form-group">
-              <input type="text" class="form-control m-2" placeholder="min">
-              <input type="text" class="form-control m-2" placeholder="max">
+              <input type="text" id="fib-min" class="form-control m-2" placeholder="min">
+              <input type="text" id="fib-max" class="form-control m-2" placeholder="max">
             </div>
-            <button type="button" class="btn btn-primary mt-2">Get result</button>
+            <button type="button" id="btn-fib-min-max" class="btn btn-primary">Get result</button>
           </form>
 
         <div class="result-fibonacci"></div>

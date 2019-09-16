@@ -44,15 +44,15 @@ export const getMaxLuckyTickets = (obj = {},) => {
     complicated(arr);
   }
 
-  if (simpleCounter > complicatCounter) {
-    result.name = 'Simple Counter';
-    result. happyQuantity = simpleCounter;
-  } else if (simpleCounter < complicatCounter) {
-    result.name = 'Complicated Counter';
-    result.happyQuantity = complicatCounter;
-  } else {
-    result.name = 'No winner';
-  };
+  result.simple = simpleCounter;
+  result.complicate = complicatCounter;
 
+  if (simpleCounter > complicatCounter) {
+    result.winner = 'Simple Counter';
+  } else if (simpleCounter < complicatCounter) {
+    result.winner = 'Complicated Counter';
+  } else {
+    result.winner = 'No winner';
+  };
   return result;
 };

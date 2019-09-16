@@ -1,12 +1,12 @@
-// import {validateTriangles} from './validation.js';
+import {validateTriangles} from './validation.js';
 import {trianglesError} from './errors.js';
 
-export const sortTriangles = (arr = [],) => {
-  // let isValid = (validateTriangles(arr,));
+export const sortTriangles = (arr = [...{vertices, a, b, c}],) => {
+  let isValid = (validateTriangles(arr,));
 
-  // if (!isValid) {
-  //   return trianglesError;
-  // };
+  if (!isValid) {
+    return trianglesError;
+  };
   // Geron's formula
   let  getAreaGeron = (elem) => {
     let p = 0.5 * (elem.a + elem.b + elem.c);
