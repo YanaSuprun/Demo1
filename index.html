@@ -33,6 +33,7 @@
           <a class="list-group-item list-group-item-action" id="task-7" data-toggle="list" href="#list-task7"
             role="tab" aria-controls="task7">Task №7</a>
         </div>
+        <a href="tests.html" class="d-inline-block mt-4 p-3 bg-info text-white rounded btn btn-default">Go to tests</a>
       </div>
 
       <div class="col-8">
@@ -50,16 +51,16 @@
             <form class="form-inline" name="form1">
               <div class="form-group">
                 <label for="height">height:</label>
-                <input type="text" id="height" class="form-control m-2" placeholder="number" required>
+                <input type="text" id="height" class="form-control m-2 col-2" placeholder="number" required>
                 <label for="width">width:</label>
-                <input type="text" id="width" class="form-control m-2" placeholder="number" required>
+                <input type="text" id="width" class="form-control m-2 col-2" placeholder="number" required>
                 <label for="symbol">symbol:</label>
-                <input type="text" id="symbol" class="form-control m-2" placeholder="symbol" required>
+                <input type="text" id="symbol" class="form-control m-2 col-2" placeholder="symbol" required>
               </div>
               <button type="button" id="btn-get-chessboard" class="btn btn-primary mt-3">Show chess board</button>
             </form>
 
-            <textarea id="result-chessboard" class="mt-3 p-3" name="" id="" cols="50" rows="50"></textarea>
+            <textarea id="result-chessboard" class="mt-3 p-3" name="" id="" cols="50" rows="10"></textarea>
           </div>
 
           <!--Task №2-->
@@ -92,8 +93,128 @@
             <div id="result-envelope" class="mt-3"></div>
           </div>
 
+          <!--Task №3-->
+          <div class="tab-pane fade" id="list-task3" role="tabpanel" aria-labelledby="task-3">
+            <div>
+              <h2>Triangles Sort</h2>
+              <p>Output triangles in descending order of their area.</p>
+              <p>Входные параметры: массив объектов треугольник</p>
+              <p>Выход: упорядоченный массив имён треугольников</p>
+              <h4>Примечание:</h4>
+              <ul>
+                <li>Расчёт площади треугольника должен производится по формуле Герона</li>
+                <li>Каждый треугольник определяется именами вершин и длинами его сторон</li>
+                <li>Приложение должно обрабатывать ввод чисел с плавающей точкой</li>
+              </ul>
+            </div>
 
+            <form class="form-inline" name="form3">
+              <div class="triangle">
+                <p class="mt-2">Triangle 1:</p>
+                <input type="text" class="form-control col-2 mr-2" placeholder="vertices">
+                <input type="text" class="form-control col-2 mr-2" placeholder="side1">
+                <input type="text" class="form-control col-2 mr-2" placeholder="side2">
+                <input type="text" class="form-control col-2 mr-2" placeholder="side3">
+              </div>
+              <div class="triangle">
+                <p class="mt-2">Triangle 2:</p>
+                <input type="text" class="form-control col-2 mr-2" placeholder="vertices">
+                <input type="text" class="form-control col-2 mr-2" placeholder="side1">
+                <input type="text" class="form-control col-2 mr-2" placeholder="side2">
+                <input type="text" class="form-control col-2 mr-2" placeholder="side3">
+              </div>
+
+              <button type="button" class="btn btn-primary btn-bottom mt-3">Start sort</button>
+            </form>
+
+            <div id="result-triangles"></div>
+          </div>
+
+          <!--Task №4-->
+          <div class="tab-pane fade" id="list-task4" role="tabpanel" aria-labelledby="task-4">
+            <div>
+              <h2>Palindrome</h2>
+              <p>Check if the number or part of it is a palindrome. For example, the number 1234437 is not a palindrome, but its part 3443 is a palindrome. Numbers smaller than 10 should not be considered a palindrome</p>
+              <p>Input Parameters: Number</p>
+              <p>Output: extracted from the palindrome, or 0 if the extraction failed</p>
+            </div>
+
+            <form class="form-inline" name="form4">
+              <div class="form-group">
+                <input type="text" class="form-control m-2" placeholder="number">
+              </div>
+              <button type="button" class="btn btn-primary m-2">Get palindrome</button>
+            </form>
+
+            <div id="result-palindrome"></div>
+          </div>
+
+          <!--Task №5-->
+          <div class="tab-pane fade" id="list-task5" role="tabpanel" aria-labelledby="task-5">
+            <div>
+              <h2>Lucky tickets</h2>
+              <p>There are 2 ways to count lucky tickets:</p>
+              <p>1. Simple - if the sum of the first three digits is equal to the sum of the last three, then this ticket is considered lucky.</p>
+              <p>2. Complicated - if the sum of the even numbers of the ticket is equal to the sum of the odd numbers of the ticket, then the ticket is considered lucky.</p>
+              <p>Determine which way will give a greater number of lucky tickets at a given interval</p>
+              <p>Input parameters: min and max(six digit numbers)</p>
+              <p>Output: an object with information about the winning method and the number of lucky tickets.</p>
+            </div>
+
+            <form class="form-inline" name="form5">
+              <div class="form-group">
+                <input type="text" class="form-control m-2" maxlength="6" placeholder="min">
+                <input type="text" class="form-control m-2" maxlength="6" placeholder="max">
+              </div>
+              <button type="button" class="btn btn-primary m-2">Start count</button>
+            </form>
+
+            <div id="result-tickets"></div>
+          </div>
+
+        <!--Task №6-->
+        <div class="tab-pane fade" id="list-task6" role="tabpanel" aria-labelledby="task-6">
+          <div>
+            <h2>Numerical sequence</h2>
+            <p>Вывести через запятую ряд длиной n, состоящий из натуральных чисел, квадрат которых не меньше заданного
+              m</p>
+            <p>Входные параметры: длина и значение минимального квадрата</p>
+            <p>Выход: строка с рядом чисел</p>
+          </div>
+
+          <form class="form-inline" name="form6">
+            <div class="form-group">
+              <input type="text" class="form-control m-2" placeholder="length">
+              <input type="text" class="form-control m-2" placeholder="min">
+            </div>
+            <button type="button" class="btn btn-primary m-2">Get sequence</button>
+          </form>
+
+          <div class="result-sequense"></div>
         </div>
+
+        <!--Task №7-->
+        <div class="tab-pane fade" id="list-task7" role="tabpanel" aria-labelledby="task-7">
+          <div>
+            <h2>Fibonacci</h2>
+            <p>Print all Fibonacci numbers that are in the specified range of min and max, or have the specified length.</p>
+            <p>Input parameters: min and max > 0, or length</p>
+            <p>Output: array of numbers</p>
+          </div>
+
+          <form class="form-inline" name="form7">
+            <div class="form-group">
+              <input type="text" class="form-control m-2" placeholder="length">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control m-2" placeholder="min">
+              <input type="text" class="form-control m-2" placeholder="max">
+            </div>
+            <button type="button" class="btn btn-primary mt-2">Get result</button>
+          </form>
+
+        <div class="result-fibonacci"></div>
+
       </div>
     </div>
   </div>
