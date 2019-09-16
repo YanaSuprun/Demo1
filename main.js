@@ -6,21 +6,13 @@ import {getMaxLuckyTickets} from './src/task5.js';
 import {getNumericalSequence} from './src/task6.js';
 import {getFibonacci} from './src/task7.js';
 
-import {chessboardError} from './src/errors.js';
-import {envelopesError} from './src/errors.js';
-
-import {validateChessboard} from './src/validation.js';
-import {validateEnvelopes} from './src/validation.js';
-
 
 const get = function getElement(id) {
   return document.getElementById(id);
 }
 
-
 // Task 1
-const btnGetChessboard = get('btn-get-chessboard');
-btnGetChessboard.addEventListener('click', chessboard);
+get('btn-get-chessboard').addEventListener('click', chessboard);
 
 function chessboard () {
   const height = get('height').value;
@@ -28,13 +20,12 @@ function chessboard () {
   const symbol = get('symbol').value;
   const resultContainer = get('result-chessboard');
 
-  if(validateChessboard(height,width,symbol)) {
-    let success = showChessboard(height, width, symbol);
-    resultContainer.value = `${success}`;
+  const show = showChessboard(height, width, symbol);
+  if(show.reason) {
+    resultContainer.value = `${show.reason}`;
   } else {
-    let error = chessboardError.reason;
-    resultContainer.value = `${error}`;
-  };
+    resultContainer.value = `${show}`;
+  }
 };
 
 // Task 2
