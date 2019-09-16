@@ -42,11 +42,11 @@ export function getFibonacci(context) {
     return fibArr.filter(elem => elem.toString().length === length);
   };
 
-  // if (context.hasOwnProperty('length')) {
-  //   return fibonaciNumLength(context);
-  // };
+  if (context.hasOwnProperty('length')) {
+    return fibonaciNumLength(context);
+  };
 
-  // if (context.hasOwnProperty('min')) {
-  //   return fibonaciFromMinToMax(context);
-  // };
+  if (context.hasOwnProperty('min')) {
+    return fibonaciFromMinToMax(context);
+  };
 };
