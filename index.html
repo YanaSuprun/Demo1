@@ -56,12 +56,43 @@
                 <label for="symbol">symbol:</label>
                 <input type="text" id="symbol" class="form-control m-2" placeholder="symbol" required>
               </div>
-              <button type="button" id="btn-get-chessboard"class="btn btn-primary mt-3">Show chess board</button>
+              <button type="button" id="btn-get-chessboard" class="btn btn-primary mt-3">Show chess board</button>
             </form>
+
             <textarea id="result-chessboard" class="mt-3 p-3" name="" id="" cols="50" rows="50"></textarea>
           </div>
 
           <!--Task №2-->
+          <div class="tab-pane fade" id="list-task2" role="tabpanel" aria-labelledby="task-2">
+            <div>
+              <h2>Envelopes Analysis</h2>
+              <p>There are two envelopes with sides (a, b) and (c, d). It is required to determine whether one envelope can be enclosed in other. The program should handle the floating numbers input.</p>
+              <p>Input parameters: width and height for envelope 1 and envelope 2 (should be positive numbers)</p>
+              <p>Output: envelope number, if attachment is possible, 0 - if attachment is not possible</p>
+            </div>
+
+            <form class="form-inline" name="form2">
+              <div class="form-group">
+                <p class="m-2 mr-4">Envelope 1:</p>
+                <label for="env1-width">width:</label>
+                <input type="text" id="env1-width" class="form-control m-2" placeholder="width">
+                <label for="env1-height">height:</label>
+                <input type="text" id="env1-height" class="form-control m-2" placeholder="height">
+              </div>
+              <div class="form-group">
+                <p class="m-2 mr-4">Envelope 2:</p>
+                <label for="env2-width">width:</label>
+                <input type="text" id="env2-width" class="form-control m-2" placeholder="width">
+                <label for="env2-height">height:</label>
+                <input type="text" id="env2-height" class="form-control m-2" placeholder="height">
+              </div>
+              <button type="button" id="btn-check-envelopes" class="btn btn-primary mb-2">Get Result</button>
+            </form>
+
+            <div id="result-envelope" class="mt-3"></div>
+          </div>
+
+
         </div>
       </div>
     </div>
