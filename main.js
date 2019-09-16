@@ -20,17 +20,16 @@ function chessboard () {
   const symbol = get('symbol').value;
   const resultContainer = get('result-chessboard');
 
-  const show = showChessboard(height, width, symbol);
-  if(show.reason) {
-    resultContainer.value = `${show.reason}`;
+  const result = showChessboard(height, width, symbol);
+  if(result.reason) {
+    resultContainer.value = `${result.reason}`;
   } else {
-    resultContainer.value = `${show}`;
+    resultContainer.value = `${result}`;
   }
 };
 
 // Task 2
-const btnCheckEnvelopes = get('btn-check-envelopes');
-btnCheckEnvelopes.addEventListener('click', envelopes);
+get('btn-check-envelopes').addEventListener('click', envelopes);
 
 function envelopes () {
   const a = get('env1-width').value;
