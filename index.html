@@ -96,39 +96,33 @@
           <!--Task №3-->
           <div class="tab-pane fade" id="list-task3" role="tabpanel" aria-labelledby="task-3">
             <div>
-              <p class="text-danger">!!!Need revision</p>
               <h2>Triangles Sort</h2>
               <p>Output triangles in descending order of their area.</p>
-              <p>Входные параметры: массив объектов треугольник</p>
-              <p>Выход: упорядоченный массив имён треугольников</p>
+              <p>Input parameters: Array of triangles</p>
+              <p>Output: Triangles, sorted by max area</p>
               <h4>Примечание:</h4>
-              <ul>
-                <li>Расчёт площади треугольника должен производится по формуле Герона</li>
-                <li>Каждый треугольник определяется именами вершин и длинами его сторон</li>
-                <li>Приложение должно обрабатывать ввод чисел с плавающей точкой</li>
-              </ul>
             </div>
 
             <form class="form-inline" name="form3">
               <div class="triangle">
                 <p class="mt-2">Triangle 1:</p>
-                <input type="text" id="vertices1" class="form-control col-2 mr-2" placeholder="vertices">
-                <input type="text" class="form-control col-2 mr-2" placeholder="side1">
-                <input type="text" class="form-control col-2 mr-2" placeholder="side2">
-                <input type="text" class="form-control col-2 mr-2" placeholder="side3">
+                <input type="text" class="vertices triangle-input form-control col-2 mr-2" placeholder="vertices">
+                <input type="text" class="side1 form-control col-2 mr-2" placeholder="side1">
+                <input type="text" class="side2 form-control col-2 mr-2" placeholder="side2">
+                <input type="text" class="side3 form-control col-2 mr-2" placeholder="side3">
               </div>
               <div class="triangle">
                 <p class="mt-2">Triangle 2:</p>
-                <input type="text" id="vertices2" class="form-control col-2 mr-2" placeholder="vertices">
-                <input type="text" class="form-control col-2 mr-2" placeholder="side1">
-                <input type="text" class="form-control col-2 mr-2" placeholder="side2">
-                <input type="text" class="form-control col-2 mr-2" placeholder="side3">
+                <input type="text" class="vertices triangle-input form-control col-2 mr-2" placeholder="vertices">
+                <input type="text" class="side1 form-control col-2 mr-2" placeholder="side1">
+                <input type="text" class="side2 form-control col-2 mr-2" placeholder="side2">
+                <input type="text" class="side3 form-control col-2 mr-2" placeholder="side3">
               </div>
 
               <button type="button" id="btn-triangles" class="btn btn-primary btn-bottom mt-3">Start sort</button>
             </form>
 
-            <div id="result-triangles"></div>
+            <div class="mt-2" id="result-triangles"></div>
           </div>
 
           <!--Task №4-->
@@ -196,7 +190,6 @@
         <!--Task №7-->
         <div class="tab-pane fade" id="list-task7" role="tabpanel" aria-labelledby="task-7">
           <div>
-            <p class="text-danger">!!!!!GUI did not implemented</p>
             <h2>Fibonacci</h2>
             <p>Print all Fibonacci numbers that are in the specified range of min and max, or have the specified length.</p>
             <p>Input parameters: min and max > 0, or length</p>
@@ -215,8 +208,7 @@
             <button type="button" id="btn-fib-min-max" class="btn btn-primary">Get result</button>
           </form>
 
-        <div class="result-fibonacci"></div>
-
+        <div id="result-fibonacci"></div>
       </div>
     </div>
   </div>

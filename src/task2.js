@@ -9,7 +9,7 @@ export const checkEnvelopes = ({a, b}, {c, d},) => {
   }
 
   const carverCounting = (a,b,p,q) => {
-    const count = b > (2*p*q*a + (p**2 - q**2) * Math.sqrt(p**2 + q**2 - a**2)) / (p**2 + q**2);
+    const count = b > (2 * p * q * a + (p ** 2 - q ** 2) * Math.sqrt(p ** 2 + q ** 2 - a ** 2)) / (p ** 2 + q ** 2);
     const condition = (p < a && q < b) || (p > a && (count));
     return condition;
   }

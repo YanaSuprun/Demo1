@@ -30,15 +30,25 @@ let validateEnvelopes = ({a, b}, {c, d},) => {
     && d > 0;
 };
 
-let validateTriangles = (arr = [...{vertices, a, b, c}]) => {
-  return !isNaN(a)
-    && !isNaN(b)
-    && !isNaN(c)
-    && (a + b > c
-    || b + c > a
-    || c + a > b
-    )
+let validateTriangles = (array) => {
+  console.log(array.vertices)
+  return array.hasOwnProperty('vertices')
+    && toString(array.vertices).length == 3
+  // array.map((object) => {
+  //   // Get sides
+  //   let triangleVertices = object.vertices.toLowerCase().split('');
+  //   let side1 = object[triangleVertices[0]];
+  //   let side2 = object[triangleVertices[1]];
+  //   let side3 = object[triangleVertices[2]];
+
+  //   if(side1 > 0) {
+  //     return true;
+  //   }
+  // });
+
 };
+
+// console.log(validateTriangles([{ vertices: 'DEF', d: 10, e: 20, f: 22.36 }, {vertices: 'ABC', a: 9.2, b: 5, c: 7}, {vertices: 'LMN', l: 6.5, m: 4.4, n: 7.5}]))
 
 let validateNumericalSequence = (n, m,) => {
   return !isNaN(n)

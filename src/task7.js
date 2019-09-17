@@ -39,7 +39,7 @@ export function getFibonacci(context) {
       } else fibNum = fibArr[i];
     };
 
-    return fibArr.filter(elem => elem.toString().length === length);
+    return fibArr.filter(elem => elem.toString().length == length);
   };
 
   if (context.hasOwnProperty('length')) {
